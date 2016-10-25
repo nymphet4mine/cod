@@ -1,6 +1,10 @@
 # color oriented driver
 
+Info:
 rpi ip 172.16.38.49
+
+Wenn ihr in Github einen Ordner über Tortoise hochladen wollt, geht das nicht. 
+Man muss den Ordner über Upload file auf der Github Seite hochladen. Das geht dann samt Inhalt.
 
 
 Aufgabenverteilung:
