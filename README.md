@@ -8,7 +8,7 @@ Wenn ihr in Github einen Ordner über Tortoise hochladen wollt, geht das nicht.
 Man muss den Ordner über Upload file auf der Github Seite hochladen. Das geht dann samt Inhalt.
 
 
-Aufgabenverteilung:
+Aufgabenverteilung Embedded:
 
 unverteilt:
 
@@ -36,3 +36,19 @@ Matze:
 	- Infos Sammeln zur Ansteuerung des Motors
 
 	- Motoransteuerung Programmieren
+	
+	
+Aufgabenverteilung App:
+
+unverteilt:
+
+	- 
+
+Alex:
+
+	-
+	
+Metzman:
+
+	- 
+	
