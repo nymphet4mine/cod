@@ -42,13 +42,18 @@ Aufgabenverteilung App:
 
 unverteilt:
 
+	- Playstation Controller einbinden
 	- 
 
 Alex:
 
-	-
+	- Oberflächenlayout (Gemeinsam)
+	- Videostream 
+	- Videostream backend
+	- Github ficken
 	
 Metzman:
 
-	- 
+	- Oberflächenlayout(Gemeinsam)
+	- Steuerung
 	
