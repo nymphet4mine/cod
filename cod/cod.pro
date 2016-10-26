@@ -8,10 +8,12 @@ CONFIG -= app_bundle
 TEMPLATE = app
 
 SOURCES += main.cpp \
-    mcserialcom.cpp
+    mcserialcom.cpp \
+    engine.cpp
 
 HEADERS += \
-    mcserialcom.h
+    mcserialcom.h \
+    engine.h
 
 target.path = qtTest
 INSTALLS += target
