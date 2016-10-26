@@ -18,10 +18,12 @@ HEADERS += \
 target.path = qtTest
 INSTALLS += target
 
-
-win32:CONFIG(release, debug|release): LIBS += -L$$PWD/lib/release/ -lwiringPi
-else:win32:CONFIG(debug, debug|release): LIBS += -L$$PWD/lib/debug/ -lwiringPi
-else:unix: LIBS += -L$$PWD/lib/ -lwiringPi
-
 INCLUDEPATH += $$PWD/.
 DEPENDPATH += $$PWD/.
+
+win32:CONFIG(release, debug|release): LIBS += -L$$PWD/../../../../../../../SysGCC/Raspberry/arm-linux-gnueabihf/sysroot/usr/lib/release/ -lwiringPi
+else:win32:CONFIG(debug, debug|release): LIBS += -L$$PWD/../../../../../../../SysGCC/Raspberry/arm-linux-gnueabihf/sysroot/usr/lib/debug/ -lwiringPi
+else:unix: LIBS += -L$$PWD/../../../../../../../SysGCC/Raspberry/arm-linux-gnueabihf/sysroot/usr/lib/ -lwiringPi
+
+INCLUDEPATH += $$PWD/../../../../../../../SysGCC/Raspberry/arm-linux-gnueabihf/sysroot/usr/include
+DEPENDPATH += $$PWD/../../../../../../../SysGCC/Raspberry/arm-linux-gnueabihf/sysroot/usr/include
