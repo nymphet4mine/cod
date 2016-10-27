@@ -3,102 +3,93 @@
 
     <item
         is-multidex="true"
-        jar="C:\Users\AlexR\AndroidStudioProjects\COD-App\app\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\24.2.1\jars\classes.jar"
+        jar="C:\Users\AlexR\AndroidStudioProjects\cod\COD-App\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
         jumboMode="true"
         optimize="true"
         revision="24.0.3"
-        sha1="94bc1dfb84dcc8b6f6f8f7cc726d7b2dd39c1574">
-        <dex dex="C:\Users\AlexR\AndroidStudioProjects\COD-App\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-animated-vector-drawable-24.2.1_71b053d59c699c0d32a50d7a926a1b0ceda9668f\classes.dex" />
+        sha1="49dfd20455f8856283a7ae0675f87b6bee199b43">
+        <dex dex="C:\Users\AlexR\AndroidStudioProjects\cod\COD-App\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run-bootstrap_8fef906e2425c42341863482e9fb59e638810dde\classes.dex" />
     </item>
     <item
         is-multidex="true"
-        jar="C:\Users\AlexR\AndroidStudioProjects\COD-App\app\build\intermediates\exploded-aar\com.android.support\support-core-ui\24.2.1\jars\libs\internal_impl-24.2.1.jar"
+        jar="C:\Users\AlexR\AndroidStudioProjects\cod\COD-App\app\build\intermediates\exploded-aar\com.android.support\support-core-ui\24.2.1\jars\libs\internal_impl-24.2.1.jar"
         jumboMode="true"
         optimize="true"
         revision="24.0.3"
         sha1="867dad63c33388ff8c7644b236579355036d075f">
-        <dex dex="C:\Users\AlexR\AndroidStudioProjects\COD-App\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-24.2.1_4c97436e5b5f0adb042d28fb5600ce878d02eda2\classes.dex" />
+        <dex dex="C:\Users\AlexR\AndroidStudioProjects\cod\COD-App\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-24.2.1_1dbed343add63b73cb535edaeab70b99018b8495\classes.dex" />
     </item>
     <item
         is-multidex="true"
-        jar="C:\Users\AlexR\AndroidStudioProjects\COD-App\app\build\intermediates\exploded-aar\com.android.support\support-compat\24.2.1\jars\libs\internal_impl-24.2.1.jar"
+        jar="C:\Users\AlexR\AndroidStudioProjects\cod\COD-App\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\24.2.1\jars\classes.jar"
         jumboMode="true"
         optimize="true"
         revision="24.0.3"
-        sha1="7e4389bd133359a2ff88623ff1e4ff93d6e6f780">
-        <dex dex="C:\Users\AlexR\AndroidStudioProjects\COD-App\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-24.2.1_35150b71c595fa54620657817f53458b8acd14da\classes.dex" />
+        sha1="43b2dba6b5a0b14527961b75329d0b90025f15ea">
+        <dex dex="C:\Users\AlexR\AndroidStudioProjects\cod\COD-App\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-appcompat-v7-24.2.1_d3bb73144bf18a6a3bcf2316e5012b3f5512ada2\classes.dex" />
     </item>
     <item
         is-multidex="true"
-        jar="C:\Users\AlexR\AndroidStudioProjects\COD-App\app\build\intermediates\exploded-aar\com.android.support\support-media-compat\24.2.1\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.3"
-        sha1="09b462bbcb77650284bd6614f1a32f360ef369f8">
-        <dex dex="C:\Users\AlexR\AndroidStudioProjects\COD-App\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-media-compat-24.2.1_a87437482280a086629418dbe2f73161c24dc72c\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\AlexR\AndroidStudioProjects\COD-App\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\24.2.1\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.3"
-        sha1="d5c731fc64c03dfe04d51134955b483551c35849">
-        <dex dex="C:\Users\AlexR\AndroidStudioProjects\COD-App\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-vector-drawable-24.2.1_68a7dbecb05f13c107e30fd2aa48bf9a9e91b33b\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\AlexR\AndroidStudioProjects\COD-App\app\build\intermediates\exploded-aar\com.android.support\support-compat\24.2.1\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.3"
-        sha1="0ecb4b595fa0f0f8018a149ace3ea6525624f94e">
-        <dex dex="C:\Users\AlexR\AndroidStudioProjects\COD-App\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-compat-24.2.1_85cbd4d3c6ed4a5463f2172448925cf56bab87f5\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\AlexR\AndroidStudioProjects\COD-App\app\build\intermediates\exploded-aar\com.android.support\support-core-ui\24.2.1\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.3"
-        sha1="e7f3132168957eefc46229fc32c3bd464642b71e">
-        <dex dex="C:\Users\AlexR\AndroidStudioProjects\COD-App\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-core-ui-24.2.1_f38e8e276b7dc041dc8b33cd09aca6000f588d2a\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\AlexR\AndroidStudioProjects\COD-App\app\build\intermediates\exploded-aar\com.android.support\support-fragment\24.2.1\jars\libs\internal_impl-24.2.1.jar"
+        jar="C:\Users\AlexR\AndroidStudioProjects\cod\COD-App\app\build\intermediates\exploded-aar\com.android.support\support-fragment\24.2.1\jars\libs\internal_impl-24.2.1.jar"
         jumboMode="true"
         optimize="true"
         revision="24.0.3"
         sha1="5f64d657e838e8375135c0f6057a7ff8fab6a50e">
-        <dex dex="C:\Users\AlexR\AndroidStudioProjects\COD-App\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-24.2.1_cccccfe493bc2b39053fe6b94f8b93316be0f63d\classes.dex" />
+        <dex dex="C:\Users\AlexR\AndroidStudioProjects\cod\COD-App\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-24.2.1_d488153fa6ae742e6132f73d67096cb129335bdd\classes.dex" />
     </item>
     <item
         is-multidex="true"
-        jar="C:\Users\AlexR\AndroidStudioProjects\COD-App\app\build\intermediates\exploded-aar\com.android.support\support-media-compat\24.2.1\jars\libs\internal_impl-24.2.1.jar"
+        jar="C:\Users\AlexR\AndroidStudioProjects\cod\COD-App\app\build\intermediates\exploded-aar\com.android.support\support-v4\24.2.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
+        <dex dex="C:\Users\AlexR\AndroidStudioProjects\cod\COD-App\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-v4-24.2.1_c90d51328180fb4ca69337aaeeac08fbccdcba4b\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\AlexR\AndroidStudioProjects\cod\COD-App\app\build\intermediates\exploded-aar\com.android.support\support-core-ui\24.2.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="e7f3132168957eefc46229fc32c3bd464642b71e">
+        <dex dex="C:\Users\AlexR\AndroidStudioProjects\cod\COD-App\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-core-ui-24.2.1_fa0328e5102c9ec100478412e5cbb9836cdd24f4\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\AlexR\AndroidStudioProjects\cod\COD-App\app\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\24.2.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="94bc1dfb84dcc8b6f6f8f7cc726d7b2dd39c1574">
+        <dex dex="C:\Users\AlexR\AndroidStudioProjects\cod\COD-App\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-animated-vector-drawable-24.2.1_6bc9661330c57651d6d593541a5bcc3c8e163505\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\AlexR\AndroidStudioProjects\cod\COD-App\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\24.2.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="d5c731fc64c03dfe04d51134955b483551c35849">
+        <dex dex="C:\Users\AlexR\AndroidStudioProjects\cod\COD-App\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-vector-drawable-24.2.1_66216f66d809635aa83f96becc92c70f0c4c6abc\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\AlexR\AndroidStudioProjects\cod\COD-App\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="d81add8cd0ab1c0dbfd767da778604cf7dc936c5">
+        <dex dex="C:\Users\AlexR\AndroidStudioProjects\cod\COD-App\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run_38d194862b1dfd9c3625a3b76b02d21e7ad40bed\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\AlexR\AndroidStudioProjects\cod\COD-App\app\build\intermediates\exploded-aar\com.android.support\support-media-compat\24.2.1\jars\libs\internal_impl-24.2.1.jar"
         jumboMode="true"
         optimize="true"
         revision="24.0.3"
         sha1="fbf8da429efd5ad21e02e3e5ecaa1efc4167878d">
-        <dex dex="C:\Users\AlexR\AndroidStudioProjects\COD-App\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-24.2.1_438ac241729ffdc23eda590a8cf56f7fd2152853\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\AlexR\AndroidStudioProjects\COD-App\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.3"
-        sha1="72ffd9112b04283b89332dd85e9613aa01a99abe">
-        <dex dex="C:\Users\AlexR\AndroidStudioProjects\COD-App\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run_169c36c761f0608125641a46f9954697b410c7e8\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\AlexR\AndroidStudioProjects\COD-App\app\build\intermediates\exploded-aar\com.android.support\support-core-utils\24.2.1\jars\libs\internal_impl-24.2.1.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.3"
-        sha1="935a969265b2a166b2d20415423f5f6e90fe16e0">
-        <dex dex="C:\Users\AlexR\AndroidStudioProjects\COD-App\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-24.2.1_d8b5ea7af071fcdce9c52322b05a398542378416\classes.dex" />
+        <dex dex="C:\Users\AlexR\AndroidStudioProjects\cod\COD-App\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-24.2.1_fdc37baf2f98fbcb393ddd924e62fcd97fb749c8\classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -107,52 +98,61 @@
         optimize="true"
         revision="24.0.3"
         sha1="8de3aafecbdf98a61db6427f008f2d515bcd2544">
-        <dex dex="C:\Users\AlexR\AndroidStudioProjects\COD-App\app\build\intermediates\transforms\dex\debug\folders\1000\10\support-annotations-24.2.1_5439f4947226f9f12f26bff92d7b004feba40a75\classes.dex" />
+        <dex dex="C:\Users\AlexR\AndroidStudioProjects\cod\COD-App\app\build\intermediates\transforms\dex\debug\folders\1000\10\support-annotations-24.2.1_5439f4947226f9f12f26bff92d7b004feba40a75\classes.dex" />
     </item>
     <item
         is-multidex="true"
-        jar="C:\Users\AlexR\AndroidStudioProjects\COD-App\app\build\intermediates\exploded-aar\com.android.support\support-core-utils\24.2.1\jars\classes.jar"
+        jar="C:\Users\AlexR\AndroidStudioProjects\cod\COD-App\app\build\intermediates\exploded-aar\com.android.support\support-core-utils\24.2.1\jars\libs\internal_impl-24.2.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="935a969265b2a166b2d20415423f5f6e90fe16e0">
+        <dex dex="C:\Users\AlexR\AndroidStudioProjects\cod\COD-App\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-24.2.1_c35c93a616451b97f312619be29bd7586b9063f8\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\AlexR\AndroidStudioProjects\cod\COD-App\app\build\intermediates\exploded-aar\com.android.support\support-core-utils\24.2.1\jars\classes.jar"
         jumboMode="true"
         optimize="true"
         revision="24.0.3"
         sha1="9c4c3bc902450c39ed54de170db4fb12aea20a35">
-        <dex dex="C:\Users\AlexR\AndroidStudioProjects\COD-App\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-core-utils-24.2.1_d41962dad63b4762afed204cd09f7aaf131fd7bd\classes.dex" />
+        <dex dex="C:\Users\AlexR\AndroidStudioProjects\cod\COD-App\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-core-utils-24.2.1_88b4eacfb1a2c33757eae301fa95c3409197e847\classes.dex" />
     </item>
     <item
         is-multidex="true"
-        jar="C:\Users\AlexR\AndroidStudioProjects\COD-App\app\build\intermediates\exploded-aar\com.android.support\support-fragment\24.2.1\jars\classes.jar"
+        jar="C:\Users\AlexR\AndroidStudioProjects\cod\COD-App\app\build\intermediates\exploded-aar\com.android.support\support-fragment\24.2.1\jars\classes.jar"
         jumboMode="true"
         optimize="true"
         revision="24.0.3"
         sha1="b9a1ac78ad7ef3abedc4a4b30cd92bcacb939d1f">
-        <dex dex="C:\Users\AlexR\AndroidStudioProjects\COD-App\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-fragment-24.2.1_f0b59d9acd9a05ecd00508f18670dedf45b6d9e4\classes.dex" />
+        <dex dex="C:\Users\AlexR\AndroidStudioProjects\cod\COD-App\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-fragment-24.2.1_d26575483cd4698d366969bd5d818abd2b619d71\classes.dex" />
     </item>
     <item
         is-multidex="true"
-        jar="C:\Users\AlexR\AndroidStudioProjects\COD-App\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\24.2.1\jars\classes.jar"
+        jar="C:\Users\AlexR\AndroidStudioProjects\cod\COD-App\app\build\intermediates\exploded-aar\com.android.support\support-compat\24.2.1\jars\libs\internal_impl-24.2.1.jar"
         jumboMode="true"
         optimize="true"
         revision="24.0.3"
-        sha1="43b2dba6b5a0b14527961b75329d0b90025f15ea">
-        <dex dex="C:\Users\AlexR\AndroidStudioProjects\COD-App\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-appcompat-v7-24.2.1_dbe4d88697e96c29581e09f0f8c4d6edb7ecfddf\classes.dex" />
+        sha1="7e4389bd133359a2ff88623ff1e4ff93d6e6f780">
+        <dex dex="C:\Users\AlexR\AndroidStudioProjects\cod\COD-App\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-24.2.1_f67dd3a267eb497fc30dd86faf55b39ee98a64b0\classes.dex" />
     </item>
     <item
         is-multidex="true"
-        jar="C:\Users\AlexR\AndroidStudioProjects\COD-App\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
+        jar="C:\Users\AlexR\AndroidStudioProjects\cod\COD-App\app\build\intermediates\exploded-aar\com.android.support\support-media-compat\24.2.1\jars\classes.jar"
         jumboMode="true"
         optimize="true"
         revision="24.0.3"
-        sha1="b64e3162165ab181ce423a615ce6a72518d871b6">
-        <dex dex="C:\Users\AlexR\AndroidStudioProjects\COD-App\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run-bootstrap_ea3e4cc827dc748481c972fcf0b72b41c2a72754\classes.dex" />
+        sha1="09b462bbcb77650284bd6614f1a32f360ef369f8">
+        <dex dex="C:\Users\AlexR\AndroidStudioProjects\cod\COD-App\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-media-compat-24.2.1_7c9660c86a4e9f0a0109c2ee315b2cea31c9a35d\classes.dex" />
     </item>
     <item
         is-multidex="true"
-        jar="C:\Users\AlexR\AndroidStudioProjects\COD-App\app\build\intermediates\exploded-aar\com.android.support\support-v4\24.2.1\jars\classes.jar"
+        jar="C:\Users\AlexR\AndroidStudioProjects\cod\COD-App\app\build\intermediates\exploded-aar\com.android.support\support-compat\24.2.1\jars\classes.jar"
         jumboMode="true"
         optimize="true"
         revision="24.0.3"
-        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
-        <dex dex="C:\Users\AlexR\AndroidStudioProjects\COD-App\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-v4-24.2.1_f89d45c65ff5e9dbcfd9a6e3b94caf2ad43cba50\classes.dex" />
+        sha1="0ecb4b595fa0f0f8018a149ace3ea6525624f94e">
+        <dex dex="C:\Users\AlexR\AndroidStudioProjects\cod\COD-App\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-compat-24.2.1_466698ffb54116734c23dd3dbedfabd13cd860df\classes.dex" />
     </item>
 
 </items>

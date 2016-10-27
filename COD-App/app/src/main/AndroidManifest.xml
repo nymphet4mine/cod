@@ -19,5 +19,6 @@
         <activity android:name=".FernzugriffActivity"></activity>
         <activity android:name=".BilduebertragungsActivity"></activity>
     </application>
+    <uses-permission android:name="android.permission.INTERNET" />
 
 </manifest>

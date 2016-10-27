@@ -9,17 +9,19 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 
+
+
 public class MainActivity extends AppCompatActivity {
-    Button fernzugriff;
-    Button bildübertragung;
+
+    private static String ip;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        fernzugriff = (Button) findViewById(R.id.fernzugriff);
+        Button fernzugriff = (Button) findViewById(R.id.fernzugriff);
         fernzugriff.setOnClickListener(fernzugriffHandler);
-        bildübertragung = (Button) findViewById(R.id.bildübertragung);
+        Button bildübertragung = (Button) findViewById(R.id.bildübertragung);
         bildübertragung.setOnClickListener(bildübertragungHandler);
     }
 
@@ -60,6 +62,14 @@ public class MainActivity extends AppCompatActivity {
             return true;
         }
         return super.onOptionsItemSelected(item);
+    }
+
+    public static String getIp (){
+        return ip;
+    }
+
+    public static void setIp (String ipAdresse) {
+        ip = ipAdresse;
     }
 
 

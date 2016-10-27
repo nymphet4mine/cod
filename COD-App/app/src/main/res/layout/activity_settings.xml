@@ -11,13 +11,34 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="colourorienteddriver.cod_app.app.SettingsActivity">
 
+    <TextView
+        android:text="IP-Adresse eingeben:"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="46dp"
+        android:id="@+id/ipText" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="text"
+        android:ems="10"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="92dp"
+        android:id="@+id/editText"
+        android:background="#FFFFFF"/>
 
     <Button
-        android:text="Button"
+        android:text="Save"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="199dp"
-        android:id="@+id/button3" />
+        android:id="@+id/saveButton"
+        android:onClick=""/>
+
 </RelativeLayout>
