@@ -1,11 +1,33 @@
 #include <QCoreApplication>
 #include "engine.h"
+#include <QTest>
+#include <iostream>
 
-int main(int argc, char *argv[])
+using namespace std;
+
+int main()
 {
-    QCoreApplication a(argc, argv);
-    engine *e = new engine();
+    cout << "t1";
 
-    return a.exec();
+    engine *e = new engine();
+    cout << "t3";
+    bool high = true;
+    for(;;){
+        int i;
+        cin >> i;
+
+        if(i == 101){ high != high;  continue;}
+        if(i == 102) break;
+
+        e->setDir(high);
+        e->setPWMSignal(i);
+    }
+//    for(int i = 0; i<101; i++)
+//    {
+//        e->setPWMSignal(i);
+//        std::cout << i;
+//        QTest::qSleep(100);
+//    }
+    return 0;
 }
 

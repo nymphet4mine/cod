@@ -1,4 +1,4 @@
-QT += core serialport
+QT += core serialport testlib
 QT -= gui
 
 TARGET = cod
@@ -15,7 +15,7 @@ HEADERS += \
     mcserialcom.h \
     engine.h
 
-target.path = qtTest
+target.path = qtWorkspace
 INSTALLS += target
 
 INCLUDEPATH += $$PWD/.

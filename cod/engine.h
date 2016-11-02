@@ -2,19 +2,11 @@
 #define ENGINE_H
 
 #ifndef PIN_PWM
-#define PIN_PWM 5
+#define PIN_PWM 1
 #endif
 
 #ifndef PIN_DIR
-#define PIN_DIR 7
-#endif
-
-#ifndef PIN_OUT_A
-#define PIM_OUT_A 8
-#endif
-
-#ifndef PIN_OUT_B
-#define PIN_OUT_B 9
+#define PIN_DIR 0
 #endif
 
 #include <QObject>
@@ -25,6 +17,8 @@ class engine
 {
 public:
     engine();
+    void setPWMSignal(int value);
+    void setDir(bool high);
 private:
 };
 
