@@ -11,7 +11,7 @@ engine::engine()
     //leere if Anweisung
     pinMode(PIN_PWM, PWM_OUTPUT);
     pinMode(PIN_DIR, OUTPUT);
-    if(softPwmCreate(PIN_PWM, 0, 100));
+    if(softPwmCreate(PIN_PWM, 0, 10));
 
     //leere if Anweisung
 }

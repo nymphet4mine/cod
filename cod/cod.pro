@@ -9,11 +9,13 @@ TEMPLATE = app
 
 SOURCES += main.cpp \
     mcserialcom.cpp \
-    engine.cpp
+    engine.cpp \
+    servo.cpp
 
 HEADERS += \
     mcserialcom.h \
-    engine.h
+    engine.h \
+    servo.h
 
 target.path = qtWorkspace
 INSTALLS += target
