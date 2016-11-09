@@ -16,6 +16,7 @@ int main()
 
     servo *s = new servo();
     int value;
+    std::cout << "enter value:";
     for(;;)
     {
         cin >> value;
