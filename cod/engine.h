@@ -1,12 +1,12 @@
 #ifndef ENGINE_H
 #define ENGINE_H
 
-#ifndef PIN_PWM
-#define PIN_PWM 1
+#ifndef PIN_PWM_Engine
+#define PIN_PWM_Engine 24
 #endif
 
 #ifndef PIN_DIR
-#define PIN_DIR 0
+#define PIN_DIR 17
 #endif
 
 #include <QObject>

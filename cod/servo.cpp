@@ -2,20 +2,22 @@
 #include <QDebug>
 #include <pthread.h>
 #include <iostream>
+#include <pigpio.h>
 
 servo::servo()
 {
-    pinMode(PIN_PWM_Servo, PWM_OUTPUT);
-    softPwmCreate(PIN_PWM_Servo, 0, 100);
+    gpioSetMode(PIN_PWM_Servo, PI_OUTPUT);
+    gpioSetPWMfrequency(PIN_PWM_Servo, 50);
+    // range = 1023 (51 ganz rechts, 75 ganz links)
+    gpioSetPWMrange(PIN_PWM_Servo, 1023);
 }
 
 void servo::setPWMSignal(int value)
 {
-//    if(value > 14)
-//        value = 14; // 14 == ganz links.
-//    else if(value < 10)
-//        value = 10; // 10 == ganz rechts.
-    softPwmWrite(PIN_PWM_Servo, value);
-    std::cout << "set";
-    std::cout << value;
+    if(value > 75)
+        value = 75;
+    else if(value < 51)
+        value = 51;
+
+    gpioPWM(PIN_PWM_Servo, value);
 }

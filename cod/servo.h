@@ -2,7 +2,7 @@
 #define SERVO_H
 
 #ifndef PIN_PWM_Servo
-#define PIN_PWM_Servo 1
+#define PIN_PWM_Servo 23
 #endif
 
 #include <QObject>

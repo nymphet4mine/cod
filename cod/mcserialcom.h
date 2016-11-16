@@ -6,6 +6,7 @@
 #include <QDebug>
 #include <QObject>
 #include <QCoreApplication>
+#include <pigpio.h>
 
 #ifndef BYTESTORECEIVE
 #define BYTESTORECEIVE 56
