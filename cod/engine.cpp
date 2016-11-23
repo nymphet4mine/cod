@@ -33,11 +33,16 @@ void engine::setDir(bool high)
     if(high)
     {
         gpioWrite(PIN_DIR, PI_LOW);
-        std::cout << "Rückwärt";
     }
     else
     {
         gpioWrite(PIN_DIR, PI_HIGH);
-        std::cout << "Vorwärts";
     }
+}
+void engine::writeDirection(bool dir){
+    if(dir == true)
+        std::cout << "Rückwärts";
+    else
+        std::cout << "Vorwärts";
+
 }

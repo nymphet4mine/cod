@@ -19,6 +19,7 @@ public:
     engine();
     void setPWMSignal(int value);
     void setDir(bool high);
+    void writeDirection(bool dir);
 private:
 };
 

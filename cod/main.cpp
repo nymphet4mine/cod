@@ -34,6 +34,7 @@ int main()
     e->setDir(dir);
     system("/bin/stty raw");
     while((c=getchar())!= '.'){
+        system("clear");
         //putchar(c);
         if(c == '1' && count > 0)
             count = count - 10;
@@ -65,6 +66,7 @@ int main()
             value = 61;
             s->setPWMSignal(value);
         }
+        e->writeDirection(dir);
         cout << "\n Power: ";
         cout << count << endl;
         cout << " \n";
