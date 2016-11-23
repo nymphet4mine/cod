@@ -38,7 +38,7 @@ int main()
         //putchar(c);
         if(c == '1' && count > 0)
             count = count - 10;
-        else if ( c == '2')
+        else if ( c == '2' && count < 100)
             count = count + 10;
         else if(c == '7'){
             if(dir == true)
