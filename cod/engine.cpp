@@ -24,13 +24,20 @@ engine::engine()
 void engine::setPWMSignal(int value)
 {
     //softPwmWrite(PIN_PWM, value);
+    //std::cout << value << endl;
     gpioPWM(PIN_PWM_Engine, value);
 }
 
 void engine::setDir(bool high)
 {
     if(high)
-        gpioWrite(PIN_DIR, 0);
+    {
+        gpioWrite(PIN_DIR, PI_LOW);
+        std::cout << "Rückwärt";
+    }
     else
-        gpioWrite(PIN_DIR, 1);
+    {
+        gpioWrite(PIN_DIR, PI_HIGH);
+        std::cout << "Vorwärts";
+    }
 }

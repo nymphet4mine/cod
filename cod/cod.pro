@@ -1,4 +1,6 @@
 QT += core serialport testlib
+QT += core
+QT += network
 QT -= gui
 
 TARGET = cod
@@ -10,12 +12,14 @@ TEMPLATE = app
 SOURCES += main.cpp \
     mcserialcom.cpp \
     engine.cpp \
-    servo.cpp
+    servo.cpp \
+    server.cpp
 
 HEADERS += \
     mcserialcom.h \
     engine.h \
-    servo.h
+    servo.h \
+    server.h
 
 target.path = qtWorkspace
 INSTALLS += target
@@ -36,3 +40,12 @@ else:unix: LIBS += -L$$PWD/../../../../../../../SysGCC/Raspberry/arm-linux-gnuea
 
 INCLUDEPATH += $$PWD/../../../../../../../SysGCC/Raspberry/arm-linux-gnueabihf/sysroot/usr/include
 DEPENDPATH += $$PWD/../../../../../../../SysGCC/Raspberry/arm-linux-gnueabihf/sysroot/usr/include
+
+DISTFILES += \
+    cod \
+    engine.obj \
+    main.obj \
+    mcserialcom.obj \
+    moc_mcserialcom.obj \
+    servo.obj \
+    cod.pro.user

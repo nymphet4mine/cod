@@ -6,8 +6,11 @@
 #include <pigpio.h>
 #include <termios.h>
 #include <stdio.h>
+#include "server.h"
 
 using namespace std;
+#include <QtCore/QCoreApplication>
+#include "server.h"
 
 int main()
 {
@@ -17,6 +20,8 @@ int main()
         cout << "pigpio inistialisation failed!\n";
         return 1;
     }
+
+
 
     servo *s = new servo();
     unsigned value;
@@ -40,15 +45,28 @@ int main()
                 dir = true;
             e->setDir(dir);
         }
-        else if(c == '5' && value > 52)
+        else if(c == '6' && value > 52)
         {
             value--;
+            value = 52;
             s->setPWMSignal(value);
         }
         else if(c == '4' && value < 75)
+        {
             value++;
+            value = 75;
             s->setPWMSignal(value);
+        }
+        else if(c == '5')
+        {
+
+            value++;
+            value = 61;
+            s->setPWMSignal(value);
+        }
+        cout << "\n Power: ";
         cout << count << endl;
+        cout << " \n";
         e->setPWMSignal(count);
     }
     system("/bin/stty cooked");
