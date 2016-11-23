@@ -41,11 +41,3 @@ else:unix: LIBS += -L$$PWD/../../../../../../../SysGCC/Raspberry/arm-linux-gnuea
 INCLUDEPATH += $$PWD/../../../../../../../SysGCC/Raspberry/arm-linux-gnueabihf/sysroot/usr/include
 DEPENDPATH += $$PWD/../../../../../../../SysGCC/Raspberry/arm-linux-gnueabihf/sysroot/usr/include
 
-DISTFILES += \
-    cod \
-    engine.obj \
-    main.obj \
-    mcserialcom.obj \
-    moc_mcserialcom.obj \
-    servo.obj \
-    cod.pro.user

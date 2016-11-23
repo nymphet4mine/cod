@@ -1,22 +1,24 @@
 
 #include "server.h"
+#include <iostream>
+#include <stdio.h>
 
-//Server::Server(QObject *parent) :
-//    QObject(parent)
-//{
-//    myserver = new QTcpServer(this);
-//
-//    connect(myserver,SIGNAL(newConnection()), this,SLOT(newConnection()));
-//
-//    if(!myserver->listen(QHostAddress::Any,1234))
-//    {
-//        //std::cout << "Server could not start!";
-//    }
-//    else
-//    {
-//        //std::cout << "Server started";
-//    }
-//}
+Server::Server(QObject *parent) :
+    QObject(parent)
+{
+    myserver = new QTcpServer(this);
+
+    connect(myserver,SIGNAL(newConnection()), this,SLOT(newConnection()));
+
+    if(!myserver->listen(QHostAddress::Any,8080))
+    {
+        std::cout << "Server could not start!";
+    }
+    else
+    {
+        std::cout << "Server started";
+    }
+}
 
 
 void Server::newConnection()

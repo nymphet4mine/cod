@@ -25,6 +25,7 @@ int main()
 
     servo *s = new servo();
     unsigned value;
+    Server myserver;
     value = 62;
     int c;
     int count = 0;
