@@ -1,11 +1,18 @@
 #include "inputhandler.h"
+#include "servo.h"
+#include "engine.h"
+#include <stdio.h>
+#include <termios.h>
+#include <iostream>
+
+using namespace std;
 
 InputHandler::InputHandler()
 {
 
 }
 
-void execute()
+void InputHandler::execute()
 {
     servo *s = new servo();
     engine *e = new engine();

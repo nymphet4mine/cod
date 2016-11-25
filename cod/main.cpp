@@ -7,6 +7,7 @@
 #include <termios.h>
 #include <stdio.h>
 #include "server.h"
+#include "inputhandler.h"
 
 using namespace std;
 #include <QtCore/QCoreApplication>
