@@ -13,13 +13,15 @@ SOURCES += main.cpp \
     mcserialcom.cpp \
     engine.cpp \
     servo.cpp \
-    server.cpp
+    server.cpp \
+    inputhandler.cpp
 
 HEADERS += \
     mcserialcom.h \
     engine.h \
     servo.h \
-    server.h
+    server.h \
+    inputhandler.h
 
 target.path = qtWorkspace
 INSTALLS += target
