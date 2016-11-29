@@ -1,6 +1,6 @@
 QT += core serialport testlib
 QT += core
-QT += network
+QT += network widgets
 QT -= gui
 
 TARGET = cod
