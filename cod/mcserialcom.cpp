@@ -1,9 +1,11 @@
 #include "mcserialcom.h"
+#include <iostream>
 
 
 MCSerialCom::MCSerialCom() : QObject()
 {
     serial = new QSerialPort(this);
+    connect(this, SIGNAL(mcRecReady()), this, SLOT(mcAusgabe()));
     openSerial();
 }
 
@@ -19,7 +21,7 @@ void MCSerialCom::openSerial()
         serial->setPort(info);
         serial->setPortName(info.portName());
 
-        serial->setBaudRate(QSerialPort::Baud115200, QSerialPort::AllDirections);
+        serial->setBaudRate(QSerialPort::Baud19200, QSerialPort::AllDirections);
         serial->setDataBits(QSerialPort::Data8);
         serial->setParity(QSerialPort::NoParity);
         serial->setStopBits(QSerialPort::OneStop);
@@ -29,15 +31,19 @@ void MCSerialCom::openSerial()
         if(serial->open(QIODevice::ReadWrite))
         {
             serialOpen = true;
+            std::cout << "serial open";
         }
         else
+        {
+            std::cout << "serial not open";
             serialOpen = false;
+        }
     }
 }
 
 void MCSerialCom::closeSerial()
 {
-    if(!serialOpen) {qDebug() << "serial not open!"; return;}
+    if(!serialOpen) {std::cout << "serial not open!"; return;}
 
     serial->close();
     serialOpen=false;
@@ -45,28 +51,23 @@ void MCSerialCom::closeSerial()
 
 void MCSerialCom::startRead()
 {
-    if(!serialOpen) {qDebug() << "serial not open!"; return;}
+    if(!serialOpen) {std::cout << "serial not open!"; return;}
 
     serial->clear(QSerialPort::AllDirections);
     QObject::connect(serial, &QSerialPort::readyRead, this, &MCSerialCom::readData);
     QByteArray send;
 
-    send[0] = 0;
-    send[1] = 1;
-    send[2] = 2;
-    send[3] = 4;
-    send[4] = 8;
+    send[0] = 196;
 
     serial->write(send);
 }
 
 void MCSerialCom::stopRead()
 {
-    if(!serialOpen) {qDebug() << "serial not open!"; return;}
+    if(!serialOpen) {std::cout << "serial not open!"; return;}
 
-    holds.clear();
     QByteArray send;
-    for(int i = 0; i<5; i++)     send[i]=0;
+    send[0]=0;
 
     serial->write(send);
 
@@ -78,44 +79,39 @@ int* MCSerialCom::get_received()
     return convData;
 }
 
+void MCSerialCom::mcAusgabe()
+{
+    std::cout << "fertig";
+    stopRead();
+}
+
 void MCSerialCom::readData()
 {
     if(serial->bytesAvailable()== BYTEPACKSIZE)
     {
-        qDebug() << QString::number(serial->bytesAvailable()) + " Bytes";
+//        std::cout << QString::number(serial->bytesAvailable()) + " Bytes";
         QByteArray rec = serial->readAll();
-        holds.append(rec);
-        if(holds.count() < BYTESTORECEIVE) return;
-        if(holds.count() > BYTESTORECEIVE) {holds.clear(); serial->clear(QSerialPort::Input); qDebug()<< "holds verworfen"; return;}
+        if(rec.count() < BYTESTORECEIVE) return;
+        if(rec.count() > BYTESTORECEIVE) {rec.clear(); serial->clear(QSerialPort::Input); std::cout << "rec verworfen"; return;}
         ///////////////////////////////////////
-        qDebug() << "RECS";
-        for(int i = 0; i<holds.length(); i++)
-            qDebug() << QString::number(holds[i]);
-        qDebug() << "EOT";
-        qDebug() << QString::number(holds.length()) + "Bytes hold";
+//        std::cout << "REC";
+//        for(int i = 0; i<rec.length(); i++)
+//            std::cout << QString::number(rec[i]);
+//        std::cout << "EOT";
+//        std::cout << QString::number(rec.length()) + "Bytes hold";
         ///////////////////////////////////////
-        convertReceive();
-        holds.clear();
+        convertReceive(rec);
     }
     else
         serial->clear(QSerialPort::Input);
 }
 
-void MCSerialCom::convertReceive()
+void MCSerialCom::convertReceive(QByteArray rec)
 {
-    int conv[BYTESTORECEIVE/4];
+    int conv[BYTESTORECEIVE];
     for(unsigned int i=0; i<sizeof(conv)/4; i++)
-        conv[i] = 0;
+        conv[i] = rec[i];
 
-
-    for (unsigned int i=0; i<sizeof(conv)/4; i++){
-        for(int j=0; j<4; j++)
-        {
-            conv[i]<<=8;
-            conv[i]+=holds[4*i+j];
-        }
-        qDebug()<<QString::number(conv[i]);
-    }
     convData = conv;
     emit mcRecReady();
 }

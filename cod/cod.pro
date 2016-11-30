@@ -23,7 +23,7 @@ HEADERS += \
     server.h \
     inputhandler.h
 
-target.path = qtWorkspace
+target.path = qtTest
 INSTALLS += target
 
 INCLUDEPATH += $$PWD/.

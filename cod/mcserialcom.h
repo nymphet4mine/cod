@@ -9,11 +9,11 @@
 #include <pigpio.h>
 
 #ifndef BYTESTORECEIVE
-#define BYTESTORECEIVE 56
+#define BYTESTORECEIVE 6
 #endif
 
 #ifndef BYTEPACKSIZE
-#define BYTEPACKSIZE 4
+#define BYTEPACKSIZE 1
 #endif
 
 
@@ -33,9 +33,11 @@ public:
     int* get_received();
     bool serialOpen = false;
 private:
-    QByteArray holds;
     int *convData;
-    void convertReceive();
+    void convertReceive(QByteArray rec);
+
+private slots:
+    void mcAusgabe();
 
 signals:
     void mcRecReady();
