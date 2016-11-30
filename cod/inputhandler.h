@@ -6,7 +6,7 @@ class InputHandler
 {
 public:
     InputHandler();
-    void execute();
+    void execute(int data);
 };
 
 #endif // INPUTHANDLER_H

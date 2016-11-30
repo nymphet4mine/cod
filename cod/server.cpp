@@ -11,9 +11,25 @@
 #include <stdlib.h>
 #include <unistd.h>
 #include <errno.h>
+#include "inputhandler.h"
+#include <signal.h>
+#include <pigpio.h>
+
+int currentData = 3276850;
+
+void stop_running(int sig)
+{
+    printf("\ngpio terminated through exception\n");
+    gpioTerminate();
+    exit(sig);
+}
 
 Server::Server()
 {
+    signal(SIGINT, stop_running);
+
+    InputHandler *iH = new InputHandler();
+
     struct sockaddr_in serv_addr, cli_addr;
     int portno = 1234;
 
@@ -42,19 +58,33 @@ Server::Server()
        while ( 1 ) {
             //---- wait for a number from client ---
             data = getData( newsockfd );
+
             printf( "got %d\n", data );
-            if ( data < 0 )
+            if ( data <= 0 )
                break;
 
-            data = func( data );
+            //data = func( data );
 
             //--- send new data back ---
-            printf( "sending back %d\n", data );
+            //printf( "sending back %d\n", data );
+            iH->execute(data);
        }
 
        //--- if -2 sent by client, we can quit ---
-       if ( data == -2 )
-         break;
+       if(data == 0)
+       {
+           std::cout << "App closed" << std::endl;
+           iH->execute(3276850);
+           sleep(1);
+           break;
+       }
+       else if ( data < 0 )
+       {
+           std::cout << "lost connection" << std::endl;
+           iH->execute(3276850);
+           sleep(1);
+           continue;
+       }
     }
 }
 

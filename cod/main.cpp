@@ -8,10 +8,12 @@
 #include <stdio.h>
 #include "server.h"
 #include "inputhandler.h"
+#include <signal.h>
 
 using namespace std;
 #include <QtCore/QCoreApplication>
 #include "server.h"
+
 
 int main()
 {
@@ -23,10 +25,11 @@ int main()
     }
 
     Server myserver;
-    InputHandler *inputHandler = new InputHandler();
-    inputHandler->execute();
+    //InputHandler *inputHandler = new InputHandler();
+    //inputHandler->execute();
 
     gpioTerminate();
+    cout << "gpio terminated!" << endl;
     return 0;
 }
 
