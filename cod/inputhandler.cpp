@@ -16,30 +16,24 @@ InputHandler::InputHandler()
     e = new engine();
 }
 
-void InputHandler::execute(int data)
+void InputHandler::app(int data)
 {  
     unsigned servoData = data / 65536;
-    //cout << "lenken: ";
-    //cout << servoData << endl;
-    s->setPWMSignal(servoData);
+    s->setPWMSignal(servoData + 195);
 
     unsigned engineData = data - (servoData * 65536);
-    //cout << "power: ";
-    //cout << engineData << endl;
+
     if(engineData >= 50)
     {
         e->setDir(false);
-        e->setPWMSignal((engineData - 50) * 4);
+        e->setPWMSignal((((engineData - 50) * 4) / 10) * 10);
     }
     else
     {
         e->setDir(true);
-        e->setPWMSignal((50 - engineData) * 2);
+        e->setPWMSignal((((50 - engineData) * 2) / 10) * 10);
     }
-
-
-
-
+}
 
 
 //    unsigned value = 62;
@@ -88,4 +82,3 @@ void InputHandler::execute(int data)
 //        e->setPWMSignal(count);
 //    }
 //    system("/bin/stty cooked");
-}

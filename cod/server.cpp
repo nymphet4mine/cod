@@ -59,7 +59,8 @@ Server::Server()
             //---- wait for a number from client ---
             data = getData( newsockfd );
 
-            printf( "got %d\n", data );
+            //printf( "got %d\n", data );
+
             if ( data <= 0 )
                break;
 
@@ -67,21 +68,21 @@ Server::Server()
 
             //--- send new data back ---
             //printf( "sending back %d\n", data );
-            iH->execute(data);
+            iH->app(data);
        }
 
        //--- if -2 sent by client, we can quit ---
        if(data == 0)
        {
            std::cout << "App closed" << std::endl;
-           iH->execute(3276850);
+           iH->app(3276850);
            sleep(1);
            break;
        }
        else if ( data < 0 )
        {
            std::cout << "lost connection" << std::endl;
-           iH->execute(3276850);
+           iH->app(3276850);
            sleep(1);
            continue;
        }

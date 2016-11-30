@@ -5,6 +5,7 @@
 #include <pigpio.h>
 
 bool currentDirection;
+int currentPWMSignal;
 
 engine::engine()
 {
@@ -17,9 +18,9 @@ engine::engine()
 
 void engine::setPWMSignal(int value)
 {
-    value = (value / 10) * 10;
-    printf( "power: %d\n", value );
+    currentPWMSignal = value;
     gpioPWM(PIN_PWM_Engine, value);
+    writeEngineState();
 }
 
 void engine::setDir(bool high)
@@ -35,10 +36,11 @@ void engine::setDir(bool high)
         gpioWrite(PIN_DIR, PI_HIGH);
 }
 
-void engine::writeDirection(bool dir){
-    if(dir == true)
-        std::cout << "Rückwärts";
+void engine::writeEngineState()
+{
+    if(currentDirection == true)
+        printf("Rückwärts: %d\n", currentPWMSignal);
     else
-        std::cout << "Vorwärts";
+        printf("Vorwärts: %d\n", currentPWMSignal);
 
 }
