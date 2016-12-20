@@ -26,12 +26,13 @@ void InputHandler::app(int data)
     if(engineData >= 50)
     {
         e->setDir(false);
-        e->setPWMSignal((((engineData - 50) * 4) / 10) * 10);
+        printf("data: %d\n", engineData);
+        e->setPWMSignal((((engineData - 50) * 10) / 10) * 10);
     }
     else
     {
         e->setDir(true);
-        e->setPWMSignal((((50 - engineData) * 2) / 10) * 10);
+        e->setPWMSignal((((50 - engineData) * 10) / 10) * 10);
     }
 }
 

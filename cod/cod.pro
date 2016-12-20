@@ -14,14 +14,16 @@ SOURCES += main.cpp \
     engine.cpp \
     servo.cpp \
     server.cpp \
-    inputhandler.cpp
+    inputhandler.cpp \
+    linefollower.cpp
 
 HEADERS += \
     mcserialcom.h \
     engine.h \
     servo.h \
     server.h \
-    inputhandler.h
+    inputhandler.h \
+    linefollower.h
 
 target.path = qtTest
 INSTALLS += target

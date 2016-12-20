@@ -17,6 +17,7 @@
 
 int currentData = 3276850;
 
+
 void stop_running(int sig)
 {
     printf("\ngpio terminated through exception\n");
@@ -63,12 +64,18 @@ Server::Server()
 
             if ( data <= 0 )
                break;
+           // else if( data == automatikcode)
+           // {
+           //     iH->autoMode();
+           //     break;
+           // }
+            else
+                iH->app(data);
+
 
             //data = func( data );
-
             //--- send new data back ---
             //printf( "sending back %d\n", data );
-            iH->app(data);
        }
 
        //--- if -2 sent by client, we can quit ---
