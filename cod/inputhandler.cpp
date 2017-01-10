@@ -18,6 +18,12 @@ InputHandler::InputHandler()
 
 void InputHandler::app(int data)
 {  
+    if(data == 2147483647)
+    {
+        printf("Uebertragungs Fehler!!!");
+        return;
+    }
+
     unsigned servoData = data / 65536;
     s->setPWMSignal(servoData + 195);
 
