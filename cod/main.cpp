@@ -9,6 +9,7 @@
 #include "server.h"
 #include "inputhandler.h"
 #include <signal.h>
+#include "mythread.h"
 
 using namespace std;
 #include <QtCore/QCoreApplication>
@@ -17,6 +18,9 @@ using namespace std;
 
 int main()
 {
+    //MyThread mThread;
+    //mThread.start();
+    //mThread.wait();
 
     if(gpioInitialise() < 0)
     {

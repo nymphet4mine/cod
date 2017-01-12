@@ -12,7 +12,7 @@ engine::engine()
 {
     gpioSetMode(PIN_PWM_Engine, PI_OUTPUT);
     gpioSetPWMfrequency(PIN_PWM_Engine, 40000);
-    gpioSetPWMrange(PIN_PWM_Engine, 500);
+    gpioSetPWMrange(PIN_PWM_Engine, 1000);
     gpioSetMode(PIN_DIR, PI_OUTPUT);
     setDir(true);
     setPWMSignal(0);
@@ -20,8 +20,11 @@ engine::engine()
 
 void engine::setPWMSignal(int value)
 {
-    if(value > 500)
-        printf("\nERROR (data > 500)\n");
+    if(value > 300)
+    {
+        printf("\nERROR (data > 100)\n");
+        return;
+    }
 
     if(currentPWMSignal == value)
         return;

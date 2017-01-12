@@ -13,23 +13,21 @@ SOURCES += main.cpp \
     engine.cpp \
     servo.cpp \
     server.cpp \
-    inputhandler.cpp
+    inputhandler.cpp \
+    mythread.cpp
 
 HEADERS += \
     engine.h \
     servo.h \
     server.h \
-    inputhandler.h
+    inputhandler.h \
+    mythread.h
 
 target.path = qtTest
 INSTALLS += target
 
 INCLUDEPATH += $$PWD/.
 DEPENDPATH += $$PWD/.
-
-win32:CONFIG(release, debug|release): LIBS += -L$$PWD/../../../../../../../SysGCC/Raspberry/arm-linux-gnueabihf/sysroot/usr/lib/release/ -lwiringPi
-else:win32:CONFIG(debug, debug|release): LIBS += -L$$PWD/../../../../../../../SysGCC/Raspberry/arm-linux-gnueabihf/sysroot/usr/lib/debug/ -lwiringPi
-else:unix: LIBS += -L$$PWD/../../../../../../../SysGCC/Raspberry/arm-linux-gnueabihf/sysroot/usr/lib/ -lwiringPi
 
 INCLUDEPATH += $$PWD/../../../../../../../SysGCC/Raspberry/arm-linux-gnueabihf/sysroot/usr/include
 DEPENDPATH += $$PWD/../../../../../../../SysGCC/Raspberry/arm-linux-gnueabihf/sysroot/usr/include

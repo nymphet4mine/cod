@@ -15,7 +15,8 @@
 #include <signal.h>
 #include <pigpio.h>
 
-int currentData = 3276850;
+int currentData = 12850;
+bool automode = false;
 
 
 void stop_running(int sig)
@@ -30,7 +31,9 @@ Server::Server()
     signal(SIGINT, stop_running);
 
     InputHandler *iH = new InputHandler();
-
+    // TEST
+   // iH->microcontroller();
+    // TEST
     struct sockaddr_in serv_addr, cli_addr;
     int portno = 1234;
 
@@ -60,15 +63,34 @@ Server::Server()
             //---- wait for a number from client ---
             data = getData( newsockfd );
 
+            if(data == 2147483647 || data == 5019776)
+            {
+                printf("Uebertragungs Fehler!!! ( %d )\n"), data;
+                continue;
+            }
+
             //printf( "got %d\n", data );
+
+            if((data == 12850 || data == 1285012850) && automode == false)
+            {
+                printf("drin\n");
+                iH->start();
+                automode = true;
+                continue;
+            }
+            else if(data != 12850 && automode == true)
+            {
+                //printf("data: %d\n", data);
+                automode = false;
+                iH->stop();
+                iH->wait();
+            }
+            else if(data == 12850 && automode == true)
+                continue;
+
 
             if ( data <= 0 )
                break;
-           // else if( data == automatikcode)
-           // {
-           //     iH->autoMode();
-           //     break;
-           // }
             else
                 iH->app(data);
 
@@ -82,14 +104,14 @@ Server::Server()
        if(data == 0)
        {
            std::cout << "App closed" << std::endl;
-           iH->app(3276850);
+           iH->app(12850);
            sleep(1);
            break;
        }
        else if ( data < 0 )
        {
            std::cout << "lost connection" << std::endl;
-           iH->app(3276850);
+           iH->app(12850);
            sleep(1);
            continue;
        }
