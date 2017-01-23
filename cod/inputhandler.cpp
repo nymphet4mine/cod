@@ -22,6 +22,8 @@ InputHandler::InputHandler()
 {
     gpioSetMode(PIN_Sensor_Right, PI_INPUT);
     gpioSetMode(PIN_Sensor_Left, PI_INPUT);
+    gpioSetMode(PIN_Sensor_Right_Red, PI_INPUT);
+    gpioSetMode(PIN_Sensor_Right_Blue, PI_INPUT);
     s = new servo();
     e = new engine();
 }
@@ -41,10 +43,12 @@ void InputHandler::stop()
 void InputHandler::app(int data)
 {  
 
-    if(data > 25700)
+    if(data < 0 || data > 25700)
     {
-        printf( "got %d\n", data );
+        printf("Falscher Wert: %d\n", data);
+        return;
     }
+    printf( "got %d\n", data );
     unsigned servoData = data / 256;
     s->setPWMSignal(servoData + servo_offset);
 
@@ -90,7 +94,6 @@ void InputHandler::microcontroller()
 //
 //        printf("Left: %d    Right: %d\n", level_left, level_right);
 //    }
-    printf("in microC");
     running = true;
     int level_right = 0;
     int level_left = 0;
@@ -101,6 +104,8 @@ void InputHandler::microcontroller()
     int engineValue = 0;
     int drive = 100;
     int dontDrive = 0;
+    int schneller = 0;
+    int langsamer = 0;
     e->setDir(false);
     while(true)
     {
@@ -108,6 +113,21 @@ void InputHandler::microcontroller()
             break;
         level_right = gpioRead(PIN_Sensor_Right);
         level_left = gpioRead(PIN_Sensor_Left);
+        schneller = gpioRead(PIN_Sensor_Right_Blue);
+        langsamer = gpioRead(PIN_Sensor_Right_Red);
+
+        if(schneller == 1)
+        {
+            drive = 120;
+            e->setPWMSignal(drive);
+            printf("Blau erkannt -> schneller\n");
+        }
+        if(langsamer == 1)
+        {
+            drive = 100;
+            e->setPWMSignal(drive);
+            printf("Rot erkannt -> langsamer\n");
+        }
 
         if(level_left <= 0 && level_right <= 0 && previewState != 1)
         {

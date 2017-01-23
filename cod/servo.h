@@ -15,6 +15,7 @@ class servo
 public:
     servo();
     void setPWMSignal(int value);
+    void writeServoState();
 };
 
 #endif // SERVO_H

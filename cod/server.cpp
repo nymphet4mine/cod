@@ -22,6 +22,8 @@ bool automode = false;
 void stop_running(int sig)
 {
     printf("\ngpio terminated through exception\n");
+    gpioPWM(24, 0);
+    sleep(1);
     gpioTerminate();
     exit(sig);
 }
@@ -55,44 +57,57 @@ Server::Server()
 
     //--- infinite wait on a connection ---
     while ( 1 ) {
+       iH->app(12850);
        printf( "waiting for new client...\n" );
        if ( ( newsockfd = accept( sockfd, (struct sockaddr *) &cli_addr, (socklen_t*) &clilen) ) < 0 )
                    error( const_cast<char *>("ERROR on accept") );
        printf( "opened new communication with client\n" );
+       automode = false;
        while ( 1 ) {
             //---- wait for a number from client ---
             data = getData( newsockfd );
 
+            // Uebertragungs Fehler
             if(data == 2147483647 || data == 5019776)
             {
-                printf("Uebertragungs Fehler!!! ( %d )\n"), data;
+                printf("Uebertragungs Fehler!!! ( %d )\n", data);
                 continue;
             }
 
-            //printf( "got %d\n", data );
+            // App crash
+            if(data == 0)
+                break;
 
-            if((data == 12850 || data == 1285012850) && automode == false)
+            // Lost connection
+            if ( data == -1 )
             {
-                printf("drin\n");
+                std::cout << "lost connection" << std::endl;
+                iH->app(12850);
+                sleep(1);
+                break;
+            }
+
+            //if((data == 12850 || data == 1285012850) && automode == false)
+            if(data == -2 && automode == false)
+            {
+                printf("Starte automodus...\n");
                 iH->start();
                 automode = true;
                 continue;
             }
-            else if(data != 12850 && automode == true)
+            //else if(data != 12850 && automode == true)
+            else if(data == -3 && automode == true)
             {
-                //printf("data: %d\n", data);
+                printf("Beende automodus...\n");
                 automode = false;
                 iH->stop();
                 iH->wait();
+                continue;
             }
-            else if(data == 12850 && automode == true)
+            else if(automode == true)
                 continue;
 
-
-            if ( data <= 0 )
-               break;
-            else
-                iH->app(data);
+            iH->app(data);
 
 
             //data = func( data );
@@ -101,20 +116,20 @@ Server::Server()
        }
 
        //--- if -2 sent by client, we can quit ---
-       if(data == 0)
-       {
-           std::cout << "App closed" << std::endl;
-           iH->app(12850);
-           sleep(1);
-           break;
-       }
-       else if ( data < 0 )
-       {
-           std::cout << "lost connection" << std::endl;
-           iH->app(12850);
-           sleep(1);
-           continue;
-       }
+      // if(data == 0)
+      // {
+      //     std::cout << "App closed" << std::endl;
+      //     iH->app(12850);
+      //     sleep(1);
+      //     break;
+      // }
+     // if ( data <= 0 )
+     // {
+     //     std::cout << "lost connection" << std::endl;
+     //     iH->app(12850);
+     //     sleep(1);
+     //     continue;
+     // }
     }
 }
 

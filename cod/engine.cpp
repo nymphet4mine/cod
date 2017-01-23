@@ -20,7 +20,7 @@ engine::engine()
 
 void engine::setPWMSignal(int value)
 {
-    if(value > 300)
+    if(value > 500)
     {
         printf("\nERROR (data > 100)\n");
         return;

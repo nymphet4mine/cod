@@ -8,6 +8,15 @@
 #ifndef PIN_Sensor_Left
 #define PIN_Sensor_Left 22
 #endif
+
+#ifndef PIN_Sensor_Right_Red
+#define PIN_Sensor_Right_Red 5
+#endif
+
+#ifndef PIN_Sensor_Right_Blue
+#define PIN_Sensor_Right_Blue 6
+#endif
+
 #include <QtCore>
 
 class InputHandler : public QThread
