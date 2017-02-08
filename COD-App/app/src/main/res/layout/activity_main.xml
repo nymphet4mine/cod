@@ -8,26 +8,31 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    android:background="@color/colorAccent"
     tools:context="colourorienteddriver.cod_app.app.MainActivity">
 
     <Button
-        android:text="Fernzugriff \n (manuelle Steuerung)"
+        android:text="@string/button_fernsteuerung"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="94dp"
+        android:layout_height="200dip"
         android:id="@+id/fernzugriff"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
         android:layout_alignParentTop="true"
-        android:layout_alignStart="@+id/bildübertragung"
-        android:onClick="fernzugriffHandler"/>
+        android:textSize="30sp"
+        android:fontFamily="sans-serif-medium" />
 
     <Button
-        android:text="Bildübertragung"
+        android:text="@string/button_bildübertragung"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="93dp"
+        android:layout_height="200dip"
         android:id="@+id/bildübertragung"
-        android:layout_below="@+id/fernzugriff"
-        android:layout_centerHorizontal="true"
-        android:onClick=""/>
+        android:onClick=""
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="40dp"
+        android:layout_alignParentEnd="true"
+        android:textSize="30sp"
+        android:fontFamily="sans-serif-medium" />
+
 </RelativeLayout>
+

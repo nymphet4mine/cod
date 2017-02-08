@@ -1,3 +1,27 @@
 <resources>
-    <string name="app_name">COD-App</string>
+    <string name="app_name">Color Oriented Driver</string>
+
+
+    <!--Buttons-->
+    <string name="button_fernsteuerung">Fernsteuerung</string>
+    <string name="button_bildübertragung">Reine Bildübertragung</string>
+
+
+
+    <!--Preferences-->
+    <string name="preference_ip_title">IP-Adresse</string>
+    <string name="preference_ip_summary">Please enter raspberry ip address</string>
+    <string name="preference_ip_key">ipAddress</string>
+
+    <string name="preference_bildcheckbox_title">Bildübertragung Fernsteuerung</string>
+    <string name="preference_bildcheckbox_summary">Bildübertragung während Fernsteuerung</string>
+    <string name="preference_bildcheckbox_key">BildCheckBox</string>
+
+    <string name="preference_autonomesFahren_title">Autonomes Fahren</string>
+    <string name="preference_autonomesFahren_key">AutonomFahren</string>
+    <string name="preference_autonomesFahren_summary">Aktiviert das farborientierte autonome Fahren.</string>
+
+    <string name="preference_log_title">Logdatei</string>
+    <string name="preference_log_key">LogKey</string>
+
 </resources>

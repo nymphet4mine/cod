@@ -1,12 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="colourorienteddriver.cod_app.app">
+    package="colourorienteddriver.cod_app.app"
+    android:versionCode="1"
+    android:versionName="1.0">
+<!--
+    <uses-sdk
+        android:minSdkVersion="23"
+        android:targetSdkVersion="24" />
+-->
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@drawable/cover_image"
         android:label="@string/app_name"
-        android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".MainActivity">
             <intent-filter>
@@ -15,10 +22,18 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".SettingsActivity"></activity>
-        <activity android:name=".FernzugriffActivity"></activity>
-        <activity android:name=".BilduebertragungsActivity"></activity>
+        <activity android:name=".FernzugriffActivity"
+            android:screenOrientation="landscape">
+
+        </activity>
+        <activity android:name=".BilduebertragungsActivity"/>
+        <activity android:name=".MyPreferenceActivity"/>
+        <!-- ATTENTION: This was auto-generated to add Google Play services to your project for
+     App Indexing.  See https://g.co/AppIndexing/AndroidStudio for more information. -->
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
     </application>
-    <uses-permission android:name="android.permission.INTERNET" />
+
 
 </manifest>

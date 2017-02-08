@@ -1,5 +1,77 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent" android:layout_height="match_parent">
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+<LinearLayout
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    >
+
+    <com.camera.simplemjpeg.MjpegView
+        android:id="@+id/mv"
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent" />
+</LinearLayout>
+
+    <Button
+        android:text="AF"
+        android:background="@drawable/roundbutton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="27dp"
+        android:layout_marginBottom="250dp"
+        android:id="@+id/autonombutton"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true" />
+
+    <SeekBar
+        android:id="@+id/lenken"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="20dp"
+        android:max="100"
+        android:progress="50"
+        android:rotation="180"
+        android:thumb="@drawable/thumb_image"
+        android:paddingEnd="16dp"
+        android:layout_marginEnd="340dp"
+
+        android:progressDrawable="@android:color/transparent"
+        android:layout_marginStart="22dp" />
+
+    <TextView
+        android:text=""
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="91dp"
+        android:id="@+id/textView2"
+        android:textColor="@color/common_google_signin_btn_text_dark_default" />
+
+    <TextView
+        android:text=""
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/textView2"
+        android:id="@+id/textView3"
+        android:textColor="@color/common_google_signin_btn_text_dark_default" />
+
+    <SeekBar
+        android:id="@+id/beschleunigung"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="63dp"
+        android:max="100"
+        android:progress="50"
+        android:rotation="270"
+        android:progressDrawable="@android:color/transparent"
+        android:thumb="@drawable/thumb_image"
+        android:layout_below="@+id/textView2"
+    android:layout_toEndOf="@+id/textView2"
+        />
 
 </RelativeLayout>

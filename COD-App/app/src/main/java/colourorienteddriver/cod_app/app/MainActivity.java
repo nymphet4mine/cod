@@ -10,21 +10,30 @@ import android.view.View;
 import android.widget.Button;
 
 
-
 public class MainActivity extends AppCompatActivity {
 
     private static String ip;
 
+    private Button fernzugriff;
+    private Button bildübertragung;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        Button fernzugriff = (Button) findViewById(R.id.fernzugriff);
+
+        //Button für die Fernsteuerung
+        fernzugriff = (Button) findViewById(R.id.fernzugriff);
         fernzugriff.setOnClickListener(fernzugriffHandler);
-        Button bildübertragung = (Button) findViewById(R.id.bildübertragung);
+
+        //Button für die Bildübertragung
+        bildübertragung = (Button) findViewById(R.id.bildübertragung);
         bildübertragung.setOnClickListener(bildübertragungHandler);
+
     }
 
+    //OnClickLitener um auf den Druck des Buttons zu reagieren
     View.OnClickListener fernzugriffHandler = new View.OnClickListener() {
         @Override
         public void onClick(View v) {
@@ -35,6 +44,7 @@ public class MainActivity extends AppCompatActivity {
         }
     };
 
+    //OnClickLitener um auf den Druck des Buttons zu reagieren
     View.OnClickListener bildübertragungHandler = new View.OnClickListener() {
         @Override
         public void onClick(View v) {
@@ -53,24 +63,41 @@ public class MainActivity extends AppCompatActivity {
         return super.onCreateOptionsMenu(menu);
     }
 
+    //Methode um das Settingssymbol bzw. die Settings rechts oben im Bildschirm anzeigen zu lassen
     @Override
     public boolean onOptionsItemSelected(MenuItem item){
         int id = item.getItemId();
         if(id == R.id.settings){
-            Intent intent = new Intent(this, SettingsActivity.class);
+
+            //Starte die MyPreferenceActiviy Klasse
+            Intent intent = new Intent(this, MyPreferenceActivity.class);
             startActivity(intent);
-            return true;
+
+           return true;
         }
         return super.onOptionsItemSelected(item);
     }
 
+    //Get Methode für die IP
     public static String getIp (){
         return ip;
     }
 
+    //Setzt die Ip fest
     public static void setIp (String ipAdresse) {
         ip = ipAdresse;
     }
+
+    public void onDestroy() {
+
+        //-1 wird gesendet um die connection abzubrechen
+        FernzugriffActivity fa = new FernzugriffActivity();
+                fa.sendToPi(-1);
+
+        super.onDestroy();
+
+    }
+
 
 
 }
